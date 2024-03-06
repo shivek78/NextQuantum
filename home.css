@@ -1,0 +1,169 @@
+
+ .navbar-area {
+    background: rgba(0,0,0,.6);
+    border-bottom: 1px solid #000;
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-navbar ul li a:hover {
+    background: rgba(255,255,255,.1);
+  }
+  /* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+ 
+}
+
+/* Header Styles */
+.header-area {
+  background-image:url(free-medical-background-42.png) ;
+  color: #fff;
+  padding:  0%;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-area ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-area li {
+  margin-right: 20px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url(istockphoto-1165053717-612x612.jpg);
+  background-size: cover;
+  color:white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero-section .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  background-image: url(istockphoto-1341437690-612x612.jpg);
+  background-size: cover;
+  color: white;
+  border-radius: 5px;
+}
+
+/* About Section Styles */
+.about-section {
+  padding: 80px 0;
+  background-image: url(istockphoto-1341437690-612x612.jpg);
+  background-size: cover;
+  color:antiquewhite;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  background-image: url(istockphoto-1341437690-612x612.jpg);
+  background-size: cover;
+  color:antiquewhite;
+
+}
+
+.about-section p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  background-image: url(istockphoto-1341437690-612x612.jpg);
+  background-size: cover;
+  color:antiquewhite;
+}
+
+/* Services Section Styles */
+.services-section {
+  background-image:url(istockphoto-1287065554-612x612.jpg);
+ 
+  background-size: cover;
+  padding: 80px 0;
+  padding-right: 10px;
+
+}
+
+.services-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  padding-right: 10px;
+}
+
+.services {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.services{
+  width: auto;
+  height:auto;
+  padding-right: 10px;
+}
+.one{
+  background-image: url(istockphoto-1341437690-612x612.jpg);
+  background-size: cover;
+}
+

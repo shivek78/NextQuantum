@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display a map</title>
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.umd.min.js"></script>
+  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    #search { position: absolute; top: 10px; left: 10px; }
+    #directions { position: absolute; top: 50px; left: 10px; }
+  </style>
+</head>
+
+<body>
+  <h1 style="color:   blue;"> This is for the hopital seaching in punjab </h1>
+  <div id="map"></div>
+  <input id="search" type="text" placeholder="Search location in Punjab">
+  <button id="directions">Get Directions</button>
+  <script>
+      maptilersdk.config.apiKey = 'UGDPjJYUFJwI2TzGwDsK';
+      const map = new maptilersdk.Map({
+        container: 'map', // container's id or the HTML element to render the map
+        style: maptilersdk.MapStyle.STREETS,
+        center: [75.857277, 31.326015], // starting position [lng, lat] for Punjab
+        zoom: 8, // starting zoom
+      });
+
+      let destination = null;
+
+      const searchBox = document.getElementById('search');
+      searchBox.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          const query =` Punjab, ${searchBox.value}`;
+          fetch(`https://api.maptiler.com/geocoding/${encodeURIComponent(query)}.json?key=UGDPjJYUFJwI2TzGwDsK`)
+            .then(response => response.json())
+            .then(data => {
+              if (data.features && data.features.length > 0) {
+                const feature = data.features[0];
+                destination = feature.geometry.coordinates;
+                map.flyTo({center: feature.geometry.coordinates, zoom: 14});
+              }
+            });
+        }
+      });
+
+      const directionsButton = document.getElementById('directions');
+      directionsButton.addEventListener('click', function () {
+        if (destination) {
+          // Use the Mapbox Directions API here to get directions from the current location to the destination
+          // This is just a placeholder and will not work without a valid Mapbox access token
+          fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${map.getCenter().lng},${map.getCenter().lat};${destination[0]},${destination[1]}?access_token=YOUR_MAPBOX_ACCESS_TOKEN)
+            .then(response => response.json`())
+            .then(data => {
+              // Display the directions on the map
+            });
+        }
+      });
+  </script>
+</body>
+</html>

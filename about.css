@@ -1,0 +1,137 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Set your background color */
+}
+
+/* Header Styles */
+.header-area {
+  background-color: #3498db; /* Set your header background color */
+  color: #fff;
+  padding: 10px 0;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-area ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-area li {
+  margin-right: 20px;
+}
+
+/* About Me Section Styles */
+.about-me {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-me-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-image {
+  position: relative;
+}
+
+.back-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.black-image img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.about-me-content {
+  max-width: 600px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.text {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Footer Styles */
+.footer-area {
+  background-color: #34495e; /* Set your footer background color */
+ 
+}
+/* navbar regular css start */
+.navbar-area {
+  background: rgba(0,0,0,.6);
+  border-bottom: 1px solid #000;
+}
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  background: rgba(255,255,255,.1);
+}
